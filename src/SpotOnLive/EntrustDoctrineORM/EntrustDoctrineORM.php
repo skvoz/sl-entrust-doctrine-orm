@@ -65,7 +65,12 @@ class EntrustDoctrineORM
         config([
             'entrust' => [
                 'role' => 'SpotOnLive\EntrustDoctrineORM\Entities\Role',
+                'roles_table' => 'roles',
                 'permission' => 'SpotOnLive\EntrustDoctrineORM\Entities\Permission',
+                'permissions_table' => 'permissions',
+                'permission_role_table' => 'permission_role',
+                'role_user_table' => 'user_role_linker',
+                'user_foreign_key' => 'user_id',
             ]
         ]);
     }
